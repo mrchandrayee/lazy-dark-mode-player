@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080f1d">
+<title>Midnight Drive — Dark Mode Player</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">◉</span> AFTERHOURS <small>PLAYER LAB</small></a>
+  <div class="top-actions"><span class="live-dot"></span><span>NOW PLAYING</span><button id="themeToggle" class="theme-toggle" aria-label="Toggle light preview">☼</button></div>
+</header>
+<main class="layout">
+  <section class="intro">
+    <div class="eyebrow"><span></span> DARK MODE / FIELD GUIDE 06</div>
+    <h1>Lazy dark mode,<br><em>fixed 6 ways.</em></h1>
+    <p>A focused music player that proves dark UI is more than turning every pixel black. Explore six small changes that make the interface feel richer, clearer, and easier on the eyes.</p>
+    <div class="intro-meta"><span>01 — 06</span><span class="meta-line"></span><span>INTERACTIVE STUDY</span></div>
+  </section>
+  <section class="player-wrap">
+    <div class="player-top"><span><i></i> NOW PLAYING</span><span class="equalizer"><b></b><b></b><b></b><b></b></span></div>
+    <div class="player">
+      <div class="player-head"><button class="back-btn" aria-label="Back">‹</button><span>PLAYING FROM <b>YOUR LIBRARY</b></span><button class="more-btn" aria-label="More">•••</button></div>
+      <div class="main-track">
+        <div class="cover" role="img" aria-label="Synthwave sunset album artwork">
+          <div class="sun"></div><div class="horizon"></div><div class="grid-floor"></div><div class="cover-title">NIGHT<br><b>DRIVE</b></div>
+        </div>
+        <div class="track-info"><div class="playing-label"><span></span> NOW PLAYING</div><h2 id="trackTitle">Midnight Drive</h2><p id="trackArtist">Nova Lane</p><div class="track-tags"><span>Electronic</span><span>2026</span><span>Hi‑Fi</span></div><button class="like" id="likeBtn" aria-label="Like track">♡</button></div>
+      </div>
+      <div class="timeline"><div class="time-row"><span id="currentTime">1:27</span><span id="duration">3:41</span></div><input id="seek" type="range" min="0" max="221" value="87" aria-label="Track progress"><div class="ticks"><span>0:00</span><span>3:41</span></div></div>
+      <div class="controls"><button class="sub-control" id="shuffle" aria-label="Shuffle">⤨</button><button class="skip" id="prev" aria-label="Previous">◀◀</button><button class="play" id="play" aria-label="Play">Ⅱ</button><button class="skip" id="next" aria-label="Next">▶▶</button><button class="sub-control" id="repeat" aria-label="Repeat">↻</button></div>
+      <div class="volume-row"><span>VOLUME</span><span>◖</span><input id="volume" type="range" min="0" max="100" value="68" aria-label="Volume"><span id="volumeValue">68%</span></div>
+      <div class="queue-head"><span>UP NEXT <b>03 TRACKS</b></span><button id="queueToggle">VIEW ALL ↗</button></div>
+      <div class="queue" id="queue">
+        <button class="queue-item active" data-title="Midnight Drive" data-artist="Nova Lane"><span class="mini-art art-one"></span><span class="queue-text"><b>Midnight Drive</b><small>Nova Lane</small></span><span class="track-length">3:41</span><span class="playing-bars">▮▮</span></button>
+        <button class="queue-item" data-title="Glass City" data-artist="Aero Club"><span class="mini-art art-two"></span><span class="queue-text"><b>Glass City</b><small>Aero Club</small></span><span class="track-length">4:08</span></button>
+        <button class="queue-item" data-title="Low Tide" data-artist="Mira Sol"><span class="mini-art art-three"></span><span class="queue-text"><b>Low Tide</b><small>Mira Sol</small></span><span class="track-length">2:58</span></button>
+      </div>
+    </div>
+    <div class="player-caption"><span>FIG. 01</span> A calmer, more layered dark player.</div>
+  </section>
+  <section class="fixes">
+    <div class="section-head"><div><div class="eyebrow"><span></span> THE SIX FIXES</div><h2>Small shifts.<br><em>Better atmosphere.</em></h2></div><p>Each control below applies the design adjustment to the player above. Switch them on and off to compare.</p></div>
+    <div class="fix-grid">
+      <article class="fix-card" data-fix="black"><div class="fix-number">01</div><div class="fix-icon">◐</div><div class="fix-copy"><h3>Not pure black.</h3><p>Use a deep navy base instead of #000. It creates depth without harsh contrast.</p><div class="swatches"><i style="background:#000"></i><i style="background:#080f1d"></i><span>#080F1D</span></div></div><label class="switch"><input type="checkbox" checked data-toggle="black"><span></span></label></article>
+      <article class="fix-card" data-fix="white"><div class="fix-number">02</div><div class="fix-icon">Aa</div><div class="fix-copy"><h3>Soften the white.</h3><p>Replace stark white with cool, gentle off-white for long-session comfort.</p><div class="swatches"><i style="background:#fff"></i><i style="background:#dbe7f6"></i><span>#DBE7F6</span></div></div><label class="switch"><input type="checkbox" checked data-toggle="white"><span></span></label></article>
+      <article class="fix-card" data-fix="accent"><div class="fix-number">03</div><div class="fix-icon">✳</div><div class="fix-copy"><h3>Lighten the accent.</h3><p>A brighter cyan-blue gives important controls a crisp, confident signal.</p><div class="swatches"><i style="background:#075985"></i><i style="background:#38bdf8"></i><span>#38BDF8</span></div></div><label class="switch"><input type="checkbox" checked data-toggle="accent"><span></span></label></article>
+      <article class="fix-card" data-fix="surface"><div class="fix-number">04</div><div class="fix-icon">▧</div><div class="fix-copy"><h3>Lighter is closer.</h3><p>Raise selected surfaces a shade so active states feel nearer and easier to scan.</p><div class="swatches"><i style="background:#0b1525"></i><i style="background:#182b43"></i><span>#182B43</span></div></div><label class="switch"><input type="checkbox" checked data-toggle="surface"><span></span></label></article>
+      <article class="fix-card" data-fix="photos"><div class="fix-number">05</div><div class="fix-icon">▣</div><div class="fix-copy"><h3>Dim the photos.</h3><p>Lower artwork brightness slightly so imagery belongs to the dark environment.</p><div class="swatches"><i style="background:#ffb34d"></i><i style="background:#a76f42"></i><span>82% BRIGHTNESS</span></div></div><label class="switch"><input type="checkbox" checked data-toggle="photos"><span></span></label></article>
+      <article class="fix-card" data-fix="glow"><div class="fix-number">06</div><div class="fix-icon">✧</div><div class="fix-copy"><h3>Glow, not shadow.</h3><p>Use a restrained colored glow around key actions instead of heavy drop shadows.</p><div class="swatches glow-swatch"><i></i><i></i><span>SOFT BLUE GLOW</span></div></div><label class="switch"><input type="checkbox" checked data-toggle="glow"><span></span></label></article>
+    </div>
+    <div class="reset-row"><span><b id="activeCount">6</b> / 6 refinements active</span><button id="reset">RESET ALL ↺</button></div>
+  </section>
+  <footer><span>AFTERHOURS / PLAYER LAB</span><span>DESIGNED FOR THE DARK.</span><span>© 2026</span></footer>
+</main>
+<script src="app.js"></script>
+</body></html>
